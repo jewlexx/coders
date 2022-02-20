@@ -34,7 +34,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/build-angular@npm:~13.2.3":
+"@angular-devkit/build-angular@npm:13.2.4":
   version: 13.2.4
   resolution: "@angular-devkit/build-angular@npm:13.2.4"
   dependencies:
@@ -265,7 +265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/animations@npm:~13.2.0":
+"@angular/animations@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/animations@npm:13.2.3"
   dependencies:
@@ -293,7 +293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/cli@npm:~13.2.3":
+"@angular/cli@npm:13.2.4":
   version: 13.2.4
   resolution: "@angular/cli@npm:13.2.4"
   dependencies:
@@ -322,7 +322,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/common@npm:~13.2.0":
+"@angular/common@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/common@npm:13.2.3"
   dependencies:
@@ -334,7 +334,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler-cli@npm:~13.2.0":
+"@angular/compiler-cli@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/compiler-cli@npm:13.2.3"
   dependencies:
@@ -359,7 +359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:~13.2.0":
+"@angular/compiler@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/compiler@npm:13.2.3"
   dependencies:
@@ -368,7 +368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/core@npm:~13.2.0":
+"@angular/core@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/core@npm:13.2.3"
   dependencies:
@@ -380,7 +380,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/forms@npm:~13.2.0":
+"@angular/forms@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/forms@npm:13.2.3"
   dependencies:
@@ -411,7 +411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-browser-dynamic@npm:~13.2.0":
+"@angular/platform-browser-dynamic@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/platform-browser-dynamic@npm:13.2.3"
   dependencies:
@@ -425,7 +425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-browser@npm:~13.2.0":
+"@angular/platform-browser@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/platform-browser@npm:13.2.3"
   dependencies:
@@ -441,7 +441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/router@npm:~13.2.0":
+"@angular/router@npm:13.2.3":
   version: 13.2.3
   resolution: "@angular/router@npm:13.2.3"
   dependencies:
@@ -501,7 +501,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.12.3, @babel/core@npm:^7.7.5, @babel/core@npm:^7.8.6":
+"@babel/core@npm:^7.12.3, @babel/core@npm:^7.8.6":
   version: 7.17.5
   resolution: "@babel/core@npm:7.17.5"
   dependencies:
@@ -2066,7 +2066,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/api@npm:^1.0.0-rc.1":
+"@tauri-apps/api@npm:>=1.0.0-rc.1":
   version: 1.0.0-rc.1
   resolution: "@tauri-apps/api@npm:1.0.0-rc.1"
   dependencies:
@@ -2131,7 +2131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli@npm:^1.0.0-rc.5":
+"@tauri-apps/cli@npm:>=1.0.0-rc.5":
   version: 1.0.0-rc.5
   resolution: "@tauri-apps/cli@npm:1.0.0-rc.5"
   dependencies:
@@ -2305,7 +2305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jasmine@npm:~3.10.0":
+"@types/jasmine@npm:3.10.3":
   version: 3.10.3
   resolution: "@types/jasmine@npm:3.10.3"
   checksum: c2603f30307d53e8231f6c46148beb3680579c340c21857b3a58b12ba2e41e36e1edbf4b8a217d25f4c41271b276b392089f132f08592453f8c7a30fc7e099ad
@@ -2333,7 +2333,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^12.11.1":
+"@types/node@npm:12.20.46":
   version: 12.20.46
   resolution: "@types/node@npm:12.20.46"
   checksum: 5326c3b5a576e041e522670d642aa17f92d833fa33ff6a6619d7d9fbac54c6a29f329905a7ccd7642a3aac79c80f9cc6887f45e2afa2c24dcf81269c296121a8
@@ -2405,13 +2405,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:5.11.0":
-  version: 5.11.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:5.11.0"
+"@typescript-eslint/eslint-plugin@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.12.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 5.11.0
-    "@typescript-eslint/type-utils": 5.11.0
-    "@typescript-eslint/utils": 5.11.0
+    "@typescript-eslint/scope-manager": 5.12.0
+    "@typescript-eslint/type-utils": 5.12.0
+    "@typescript-eslint/utils": 5.12.0
     debug: ^4.3.2
     functional-red-black-tree: ^1.0.1
     ignore: ^5.1.8
@@ -2424,7 +2424,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: fa546ba4397f3e693870c39d1e8df6feccb728a7092be6312b78806a64c4ff4648cff0462503d3e510e8b173b9704c19e78d2a7af790ab1c0309782e33a89c32
+  checksum: ac7074b51456748ef8770d82f5b4e691e1b93bb1353b448bb1b43db5b5a9722a6a012dc1dc0a3b35ab0c0ca7c1b5412f535ad992115132ed84ed6f4179778d37
   languageName: node
   linkType: hard
 
@@ -2439,20 +2439,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:5.11.0":
-  version: 5.11.0
-  resolution: "@typescript-eslint/parser@npm:5.11.0"
+"@typescript-eslint/parser@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/parser@npm:5.12.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 5.11.0
-    "@typescript-eslint/types": 5.11.0
-    "@typescript-eslint/typescript-estree": 5.11.0
+    "@typescript-eslint/scope-manager": 5.12.0
+    "@typescript-eslint/types": 5.12.0
+    "@typescript-eslint/typescript-estree": 5.12.0
     debug: ^4.3.2
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 521b6e701d877dc0514c6a3992f4900aa6fea28ba7c0bc03c634dad2b50aa195401e45683dfebd9e8492a857cd84bba3b585d8fe8d0cd1d7e2720372c34c50a3
+  checksum: 0453c14d967ebba4ebe0d763882b7a1258f23a710d127f53196d360b78722d880cc8c0299feb52ecc4e10600834c22559bf543211249d878efad864f7ec856bc
   languageName: node
   linkType: hard
 
@@ -2466,11 +2466,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:5.11.0":
-  version: 5.11.0
-  resolution: "@typescript-eslint/type-utils@npm:5.11.0"
+"@typescript-eslint/scope-manager@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/scope-manager@npm:5.12.0"
   dependencies:
-    "@typescript-eslint/utils": 5.11.0
+    "@typescript-eslint/types": 5.12.0
+    "@typescript-eslint/visitor-keys": 5.12.0
+  checksum: 87cc4e8ab3b495293e51685566cafca6f217c7328fc1210e4a9c3a89e864c5e3a04ddde11708e07820185fd158cb448980607a93fd658fa2089c152f27a847d0
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/type-utils@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/type-utils@npm:5.12.0"
+  dependencies:
+    "@typescript-eslint/utils": 5.12.0
     debug: ^4.3.2
     tsutils: ^3.21.0
   peerDependencies:
@@ -2478,7 +2488,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: fd570806d82874289ded6bfd90ff5414d4365b95b4a2e911f7ff2fee6e2c7675d0f2f71580c24cb8be733c3dfe2cd33eedff99ae2aa50f61b1b5af76499074eb
+  checksum: 90390603319441493b62611730db78f8a732e32a5d9097d1e9c6581da6caeb71cc08a3ed6c716f2fc490b153f956c9a2471d9fbe97c22214ca86f58511c7581a
   languageName: node
   linkType: hard
 
@@ -2486,6 +2496,13 @@ __metadata:
   version: 5.11.0
   resolution: "@typescript-eslint/types@npm:5.11.0"
   checksum: b1531481da75a6c89510ad03f3db68e4797b25438bb902ee322bd1c154b83396016271cc00356dcdbc300a8ee421493aae803b8c716f36d7b4808fe045ae3a2a
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/types@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/types@npm:5.12.0"
+  checksum: f5e7f8270cb0f9f18886bf00f8f1fd589b793f4c05dc2de53cc826beb969161e19ffc10f51237402fb9f3d24f5aaf3bb41b1d8da70e115ec3ff11e79b3471988
   languageName: node
   linkType: hard
 
@@ -2507,6 +2524,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/typescript-estree@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/typescript-estree@npm:5.12.0"
+  dependencies:
+    "@typescript-eslint/types": 5.12.0
+    "@typescript-eslint/visitor-keys": 5.12.0
+    debug: ^4.3.2
+    globby: ^11.0.4
+    is-glob: ^4.0.3
+    semver: ^7.3.5
+    tsutils: ^3.21.0
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 6a8e852c210b20370eb564f3beb245c425e65a4de3e78a1e2f278a241b6acf72ba43b10767df18fc1654b529453529f721fa673569406ace4011712c9c837900
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/utils@npm:5.11.0":
   version: 5.11.0
   resolution: "@typescript-eslint/utils@npm:5.11.0"
@@ -2523,6 +2558,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@typescript-eslint/utils@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/utils@npm:5.12.0"
+  dependencies:
+    "@types/json-schema": ^7.0.9
+    "@typescript-eslint/scope-manager": 5.12.0
+    "@typescript-eslint/types": 5.12.0
+    "@typescript-eslint/typescript-estree": 5.12.0
+    eslint-scope: ^5.1.1
+    eslint-utils: ^3.0.0
+  peerDependencies:
+    eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+  checksum: 34c394db0510be78c5cbb8928c9eb81405a117dd9e5903a149e4f3c20218dcda89a29e5012984d07c8ce9e5c7f5d7c38f5c3061558028f3f518ac98bbeb9a006
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/visitor-keys@npm:5.11.0":
   version: 5.11.0
   resolution: "@typescript-eslint/visitor-keys@npm:5.11.0"
@@ -2530,6 +2581,16 @@ __metadata:
     "@typescript-eslint/types": 5.11.0
     eslint-visitor-keys: ^3.0.0
   checksum: 8f0b6fe1e86bc93825a137be3220f57e3a4bee410cca5d35963a0cd416750b31291a73c4294676d94ed0f5066b4cfb3a8f512d409881daa550d1645f4381eb21
+  languageName: node
+  linkType: hard
+
+"@typescript-eslint/visitor-keys@npm:5.12.0":
+  version: 5.12.0
+  resolution: "@typescript-eslint/visitor-keys@npm:5.12.0"
+  dependencies:
+    "@typescript-eslint/types": 5.12.0
+    eslint-visitor-keys: ^3.0.0
+  checksum: c3774f542aae801926edf86fe6cab534c4cdac914b035730912443ed53fcc701b0f0e7b1a0d5fc959484637c55f63409fc43df5508c334e202d66d4654484d11
   languageName: node
   linkType: hard
 
@@ -3505,41 +3566,41 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "coders@workspace:."
   dependencies:
-    "@angular-devkit/build-angular": ~13.2.3
+    "@angular-devkit/build-angular": 13.2.4
     "@angular-eslint/builder": 13.1.0
     "@angular-eslint/eslint-plugin": 13.1.0
     "@angular-eslint/eslint-plugin-template": 13.1.0
     "@angular-eslint/schematics": 13.1.0
     "@angular-eslint/template-parser": 13.1.0
-    "@angular/animations": ~13.2.0
+    "@angular/animations": 13.2.3
     "@angular/cdk": 13.2.3
-    "@angular/cli": ~13.2.3
-    "@angular/common": ~13.2.0
-    "@angular/compiler": ~13.2.0
-    "@angular/compiler-cli": ~13.2.0
-    "@angular/core": ~13.2.0
-    "@angular/forms": ~13.2.0
+    "@angular/cli": 13.2.4
+    "@angular/common": 13.2.3
+    "@angular/compiler": 13.2.3
+    "@angular/compiler-cli": 13.2.3
+    "@angular/core": 13.2.3
+    "@angular/forms": 13.2.3
     "@angular/material": 13.2.3
-    "@angular/platform-browser": ~13.2.0
-    "@angular/platform-browser-dynamic": ~13.2.0
-    "@angular/router": ~13.2.0
-    "@tauri-apps/api": ^1.0.0-rc.1
-    "@tauri-apps/cli": ^1.0.0-rc.5
-    "@types/jasmine": ~3.10.0
-    "@types/node": ^12.11.1
-    "@typescript-eslint/eslint-plugin": 5.11.0
-    "@typescript-eslint/parser": 5.11.0
-    eslint: ^8.2.0
-    jasmine-core: ~4.0.0
-    karma: ~6.3.0
-    karma-chrome-launcher: ~3.1.0
-    karma-coverage: ~2.1.0
-    karma-jasmine: ~4.0.0
-    karma-jasmine-html-reporter: ~1.7.0
-    rxjs: ~7.5.0
-    tslib: ^2.3.0
-    typescript: ~4.5.2
-    zone.js: ~0.11.4
+    "@angular/platform-browser": 13.2.3
+    "@angular/platform-browser-dynamic": 13.2.3
+    "@angular/router": 13.2.3
+    "@tauri-apps/api": ">=1.0.0-rc.1"
+    "@tauri-apps/cli": ">=1.0.0-rc.5"
+    "@types/jasmine": 3.10.3
+    "@types/node": 12.20.46
+    "@typescript-eslint/eslint-plugin": 5.12.0
+    "@typescript-eslint/parser": 5.12.0
+    eslint: 8.9.0
+    jasmine-core: 4.0.0
+    karma: 6.3.16
+    karma-chrome-launcher: 3.1.0
+    karma-coverage: 2.2.0
+    karma-jasmine: 4.0.1
+    karma-jasmine-html-reporter: 1.7.0
+    rxjs: 7.5.4
+    tslib: 2.3.1
+    typescript: 4.5.5
+    zone.js: 0.11.4
   languageName: unknown
   linkType: soft
 
@@ -4618,7 +4679,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.2.0":
+"eslint@npm:8.9.0":
   version: 8.9.0
   resolution: "eslint@npm:8.9.0"
   dependencies:
@@ -5843,19 +5904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"istanbul-lib-instrument@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "istanbul-lib-instrument@npm:4.0.3"
-  dependencies:
-    "@babel/core": ^7.7.5
-    "@istanbuljs/schema": ^0.1.2
-    istanbul-lib-coverage: ^3.0.0
-    semver: ^6.3.0
-  checksum: fa1171d3022b1bb8f6a734042620ac5d9ee7dc80f3065a0bb12863e9f0494d0eefa3d86608fcc0254ab2765d29d7dad8bdc42e5f8df2f9a1fbe85ccc59d76cb9
-  languageName: node
-  linkType: hard
-
-"istanbul-lib-instrument@npm:^5.0.4":
+"istanbul-lib-instrument@npm:^5.0.4, istanbul-lib-instrument@npm:^5.1.0":
   version: 5.1.0
   resolution: "istanbul-lib-instrument@npm:5.1.0"
   dependencies:
@@ -5914,17 +5963,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jasmine-core@npm:4.0.0":
+  version: 4.0.0
+  resolution: "jasmine-core@npm:4.0.0"
+  checksum: ebb5906c3e91f6d403e9122b8c2955c3272072c4b0fecc1cf1d356e8e4399b0c85b8d6dd0b5abbaa3b9afbdcd279c13394a4a71c0683d4e68fb18213abb68065
+  languageName: node
+  linkType: hard
+
 "jasmine-core@npm:^3.6.0":
   version: 3.99.0
   resolution: "jasmine-core@npm:3.99.0"
   checksum: afab2049116105547619b6591a700a137c95b3535ddc83583df666db356d45a7ea5564eeef74321b414d839c796d619e5fa1584096a73f82bd978a2bdad06b1a
-  languageName: node
-  linkType: hard
-
-"jasmine-core@npm:~4.0.0":
-  version: 4.0.0
-  resolution: "jasmine-core@npm:4.0.0"
-  checksum: ebb5906c3e91f6d403e9122b8c2955c3272072c4b0fecc1cf1d356e8e4399b0c85b8d6dd0b5abbaa3b9afbdcd279c13394a4a71c0683d4e68fb18213abb68065
   languageName: node
   linkType: hard
 
@@ -6071,7 +6120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"karma-chrome-launcher@npm:~3.1.0":
+"karma-chrome-launcher@npm:3.1.0":
   version: 3.1.0
   resolution: "karma-chrome-launcher@npm:3.1.0"
   dependencies:
@@ -6080,21 +6129,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"karma-coverage@npm:~2.1.0":
-  version: 2.1.1
-  resolution: "karma-coverage@npm:2.1.1"
+"karma-coverage@npm:2.2.0":
+  version: 2.2.0
+  resolution: "karma-coverage@npm:2.2.0"
   dependencies:
     istanbul-lib-coverage: ^3.2.0
-    istanbul-lib-instrument: ^4.0.3
+    istanbul-lib-instrument: ^5.1.0
     istanbul-lib-report: ^3.0.0
     istanbul-lib-source-maps: ^4.0.1
     istanbul-reports: ^3.0.5
     minimatch: ^3.0.4
-  checksum: c535ad34adb86c79708ff2c76caf62ab5db838e0a287d257acaef80110fadd6166b12fa3357fce5b5995cbb6837676cd17a7706e14b382a2aab53bbd54494a5f
+  checksum: 79c9df27c2de956e3314077256e508befbb7bc797f77c1ec495fc3d905574047269bfd015ea2da644a9b188fde09da42a4186b466a1cce86db45026b566b8cf0
   languageName: node
   linkType: hard
 
-"karma-jasmine-html-reporter@npm:~1.7.0":
+"karma-jasmine-html-reporter@npm:1.7.0":
   version: 1.7.0
   resolution: "karma-jasmine-html-reporter@npm:1.7.0"
   peerDependencies:
@@ -6105,7 +6154,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"karma-jasmine@npm:~4.0.0":
+"karma-jasmine@npm:4.0.1":
   version: 4.0.1
   resolution: "karma-jasmine@npm:4.0.1"
   dependencies:
@@ -6125,7 +6174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"karma@npm:~6.3.0":
+"karma@npm:6.3.16":
   version: 6.3.16
   resolution: "karma@npm:6.3.16"
   dependencies:
@@ -8206,7 +8255,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.2.0, rxjs@npm:~7.5.0":
+"rxjs@npm:7.5.4, rxjs@npm:^7.2.0":
   version: 7.5.4
   resolution: "rxjs@npm:7.5.4"
   dependencies:
@@ -9048,7 +9097,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:~4.5.2":
+"typescript@npm:4.5.5":
   version: 4.5.5
   resolution: "typescript@npm:4.5.5"
   bin:
@@ -9058,7 +9107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@~4.5.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.5.5#~builtin<compat/typescript>":
   version: 4.5.5
   resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
   bin:
@@ -9554,7 +9603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zone.js@npm:~0.11.4":
+"zone.js@npm:0.11.4":
   version: 0.11.4
   resolution: "zone.js@npm:0.11.4"
   dependencies:
