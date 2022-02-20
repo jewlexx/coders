@@ -3,8 +3,18 @@
     windows_subsystem = "windows"
 )]
 
+use tauri::Manager;
+
 fn main() {
-    tauri::Builder::default()
+    let builder = tauri::Builder::default().setup(|app| {
+        let main_window = app.get_window("main").unwrap();
+
+        main_window.open_devtools();
+
+        Ok(())
+    });
+
+    builder
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
