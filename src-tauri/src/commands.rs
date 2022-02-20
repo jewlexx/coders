@@ -25,7 +25,12 @@ pub fn open_file<R: Runtime>(
     match file_path {
         Some(path) => {
             let path = path;
-            window.set_title(path.file_name().unwrap().to_str().unwrap());
+            window
+                .set_title(&format!(
+                    "Coders | {}",
+                    path.file_name().unwrap().to_str().unwrap()
+                ))
+                .unwrap();
             Ok(path.into_os_string().into_string().unwrap())
         }
         None => Ok("Did not choose file".into()),
