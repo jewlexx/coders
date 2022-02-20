@@ -1,1 +1,7 @@
-<code class="language-typescript">{{ "import {poggers} from 'yo';" }}</code>
+<code
+  id="code"
+  class="language-typescript"
+  [contentEditable]="true"
+  [textContent]="fileText"
+  (input)="onInput($event)"
+></code>

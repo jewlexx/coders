@@ -3,20 +3,15 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::Runtime;
-
-#[tauri::command]
-async fn toggle_devtools<R: Runtime>(
-    _: tauri::AppHandle<R>,
-    window: tauri::Window<R>,
-) -> Result<(), String> {
-    window.open_devtools();
-    Ok(())
-}
+mod commands;
+use commands::*;
 
 fn main() {
-    let builder =
-        tauri::Builder::default().invoke_handler(tauri::generate_handler![toggle_devtools]);
+    let builder = tauri::Builder::default().invoke_handler(tauri::generate_handler![
+        toggle_devtools,
+        open_file,
+        read_file
+    ]);
 
     builder
         .run(tauri::generate_context!())

@@ -1,4 +1,10 @@
-code {
-  width: 100vw;
-  height: 100vh;
+#code {
+  display: block;
+  min-height: 100%;
+  width: calc(100% - 10px);
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 10px !important;
+  border-radius: 0% !important;
+  white-space: pre-wrap;
 }

@@ -42,8 +42,19 @@ $coders-theme: mat.define-light-theme(
 html,
 body {
   height: 100%;
-}
-body {
+  width: 100%;
   margin: 0;
+  padding: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: #272822; /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3a3a3a; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }
