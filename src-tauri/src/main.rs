@@ -3,16 +3,20 @@
     windows_subsystem = "windows"
 )]
 
-use tauri::Manager;
+use tauri::Runtime;
+
+#[tauri::command]
+async fn toggle_devtools<R: Runtime>(
+    _: tauri::AppHandle<R>,
+    window: tauri::Window<R>,
+) -> Result<(), String> {
+    window.open_devtools();
+    Ok(())
+}
 
 fn main() {
-    let builder = tauri::Builder::default().setup(|app| {
-        let main_window = app.get_window("main").unwrap();
-
-        main_window.open_devtools();
-
-        Ok(())
-    });
+    let builder =
+        tauri::Builder::default().invoke_handler(tauri::generate_handler![toggle_devtools]);
 
     builder
         .run(tauri::generate_context!())
