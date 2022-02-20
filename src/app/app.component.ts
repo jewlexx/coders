@@ -21,8 +21,9 @@ export class AppComponent {
         if (file === 'Did not choose file') {
           return;
         }
-        invoke<string>(`read_file`, { filePath: file }).then((contents) => {
+        invoke<string>('read_file', { filePath: file }).then((contents) => {
           this.code = contents;
+          invoke<string>('get_lang', { filePath: file }).then(console.log);
         });
       });
     }

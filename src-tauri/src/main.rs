@@ -10,7 +10,8 @@ fn main() {
     let builder = tauri::Builder::default().invoke_handler(tauri::generate_handler![
         toggle_devtools,
         open_file,
-        read_file
+        read_file,
+        get_lang,
     ]);
 
     builder
