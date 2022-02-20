@@ -1,4 +1,4 @@
-use serde_yaml::{from_str, Mapping, Sequence, Value};
+use serde_yaml::{from_str, Mapping, Value};
 use tauri::{
     api::{dialog, file},
     Runtime,
