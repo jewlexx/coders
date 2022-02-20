@@ -25,8 +25,8 @@ export class AppComponent {
         invoke<string>('read_file', { filePath: file }).then((contents) => {
           this.code = contents;
           invoke<string>('get_lang', { filePath: file }).then((language) => {
-            this.editorOptions.language = language;
-            console.log(this.editorOptions);
+            const old = this.editorOptions;
+            this.editorOptions = { ...old, language };
           });
         });
       });
