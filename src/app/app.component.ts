@@ -8,11 +8,9 @@ import { invoke } from '@tauri-apps/api';
 })
 export class AppComponent {
   editorOptions = { theme: 'vs-dark', language: 'javascript' };
-  code: string = `
-  function() {
-          alert('yay');
-      }
-      `;
+  code: string = `function funcName() {
+    alert('yay');
+}`;
 
   @HostListener('window:keydown', ['$event'])
   keyboardEvent(ev: KeyboardEvent) {
