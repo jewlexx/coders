@@ -15,6 +15,7 @@ fn main() {
     ]);
 
     builder
+        .manage(CurrentFile("".into()))
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

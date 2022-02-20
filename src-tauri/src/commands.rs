@@ -13,6 +13,8 @@ pub fn toggle_devtools<R: Runtime>(
     Ok(())
 }
 
+pub struct CurrentFile(pub String);
+
 #[tauri::command]
 pub fn open_file() -> Result<String, String> {
     let file_path = dialog::blocking::FileDialogBuilder::new().pick_file();
