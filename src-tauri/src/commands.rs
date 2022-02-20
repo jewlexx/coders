@@ -64,5 +64,5 @@ pub async fn get_lang(file_path: String) -> Result<String, String> {
         }
     }
 
-    Ok("".into())
+    Ok("text".into())
 }
