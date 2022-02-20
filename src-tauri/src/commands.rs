@@ -16,11 +16,18 @@ pub fn toggle_devtools<R: Runtime>(
 pub struct CurrentFile(pub String);
 
 #[tauri::command]
-pub fn open_file() -> Result<String, String> {
+pub fn open_file<R: Runtime>(
+    _: tauri::AppHandle<R>,
+    window: tauri::Window<R>,
+) -> Result<String, String> {
     let file_path = dialog::blocking::FileDialogBuilder::new().pick_file();
 
     match file_path {
-        Some(path) => Ok(path.into_os_string().into_string().unwrap()),
+        Some(path) => {
+            let path = path;
+            window.set_title(path.file_name().unwrap().to_str().unwrap());
+            Ok(path.into_os_string().into_string().unwrap())
+        }
         None => Ok("Did not choose file".into()),
     }
 }
