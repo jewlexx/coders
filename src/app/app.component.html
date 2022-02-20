@@ -1,7 +1,5 @@
-<code
-  id="code"
-  class="language-typescript"
-  [contentEditable]="true"
-  [textContent]="fileText"
-  (input)="onInput($event)"
-></code>
+<ngx-monaco-editor
+  class="editor"
+  [options]="editorOptions"
+  [(ngModel)]="code"
+></ngx-monaco-editor>

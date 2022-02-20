@@ -3617,6 +3617,8 @@ __metadata:
     karma-coverage: 2.2.0
     karma-jasmine: 4.0.1
     karma-jasmine-html-reporter: 1.7.0
+    monaco-editor: ^0.32.1
+    ngx-monaco-editor: ^12.0.0
     prismjs: ^1.27.0
     rxjs: 7.5.4
     tslib: 2.3.1
@@ -6756,6 +6758,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"monaco-editor@npm:^0.32.1":
+  version: 0.32.1
+  resolution: "monaco-editor@npm:0.32.1"
+  checksum: f63e96fadca3e46ee639c3c7fead95bc03413d4b47d27ffdf5636270e2753c45391e830dd34ae5404004b8fc6a06b50a91d9ae4b593e1fc21cfc20ee00ca98c5
+  languageName: node
+  linkType: hard
+
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -6843,6 +6852,19 @@ __metadata:
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
+  languageName: node
+  linkType: hard
+
+"ngx-monaco-editor@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "ngx-monaco-editor@npm:12.0.0"
+  dependencies:
+    tslib: ^2.1.0
+  peerDependencies:
+    "@angular/common": ^12.0.0
+    "@angular/core": ^12.0.0
+    monaco-editor: ^0.24.0
+  checksum: 0ae42a9fc6cfb2374e8ecfd4f5ed6ea94ec2d46bee43c27138e7994b7b58e779ec52ede6995a236d97cb3f9cb38dcb8738f0b9c757abcd5d965c94cc2bd3761d
   languageName: node
   linkType: hard
 
