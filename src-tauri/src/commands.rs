@@ -1,4 +1,4 @@
-use serde_yaml::{from_str, Mapping, Value};
+// use serde_yaml::{from_str, Mapping, Value};
 use tauri::{
     api::{dialog, file},
     Runtime,
@@ -33,36 +33,39 @@ pub async fn read_file(file_path: String) -> Result<String, String> {
 
 #[tauri::command]
 pub async fn get_lang(file_path: String) -> Result<String, String> {
-    let client = tauri::api::http::ClientBuilder::new().build().unwrap();
-    let request = tauri::api::http::HttpRequestBuilder::new(
-        "get",
-        "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml",
-    )
-    .unwrap();
+    // let client = tauri::api::http::ClientBuilder::new().build().unwrap();
+    // let request = tauri::api::http::HttpRequestBuilder::new(
+    //     "get",
+    //     "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml",
+    // )
+    // .unwrap();
 
-    let result = client.send(request).await.unwrap();
-    let bytes = result.bytes().await.unwrap().data;
-    let string = std::str::from_utf8(&bytes).unwrap().to_string();
-    let value: Mapping = from_str(&string).unwrap();
+    // let result = client.send(request).await.unwrap();
+    // let bytes = result.bytes().await.unwrap().data;
+    // let string = std::str::from_utf8(&bytes).unwrap().to_string();
+    // let value: Mapping = from_str(&string).unwrap();
 
-    for (k, v) in value {
-        match &v["extensions"] {
-            Value::Null => continue,
-            Value::Bool(_) => continue,
-            Value::Number(_) => continue,
-            Value::String(_) => continue,
-            Value::Mapping(_) => continue,
-            Value::Sequence(s) => {
-                for ext in s {
-                    if ext.as_str().unwrap() == format!(".{}", file_path.split('.').last().unwrap())
-                    {
-                        println!("{}", k.as_str().unwrap());
-                        return Ok(k.as_str().unwrap().to_string().to_lowercase());
-                    }
-                }
-            }
-        }
+    // for (k, v) in value {
+    //     match &v["extensions"] {
+    //         Value::Null => continue,
+    //         Value::Bool(_) => continue,
+    //         Value::Number(_) => continue,
+    //         Value::String(_) => continue,
+    //         Value::Mapping(_) => continue,
+    //         Value::Sequence(s) => {
+    //             for ext in s {
+    //                 if ext.as_str().unwrap() == format!(".{}", file_path.split('.').last().unwrap())
+    //                 {
+    //                     println!("{}", k.as_str().unwrap());
+    //                     return Ok(k.as_str().unwrap().to_string().to_lowercase());
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    match detect_lang::from_extension(file_path.split('.').last().unwrap()) {
+        Some(lang) => Ok(lang.to_string().to_lowercase()),
+        None => Ok("unknown".to_string()),
     }
-
-    Ok("text".into())
 }
