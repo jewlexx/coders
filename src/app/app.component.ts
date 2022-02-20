@@ -7,10 +7,11 @@ import { invoke } from '@tauri-apps/api';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  editorOptions = { theme: 'vs-dark', language: 'javascript' };
   code: string = `function funcName() {
     alert('yay');
 }`;
+
+  editorOptions = { theme: 'vs-dark', language: 'javascript' };
 
   @HostListener('window:keydown', ['$event'])
   keyboardEvent(ev: KeyboardEvent) {
@@ -23,15 +24,12 @@ export class AppComponent {
         }
         invoke<string>('read_file', { filePath: file }).then((contents) => {
           this.code = contents;
-          invoke<string>('get_lang', { filePath: file }).then(console.log);
+          invoke<string>('get_lang', { filePath: file }).then((language) => {
+            this.editorOptions.language = language;
+            console.log(this.editorOptions);
+          });
         });
       });
     }
-  }
-
-  onInput(e: Event) {
-    const target = e.target as HTMLTextAreaElement;
-    console.log(target.innerText);
-    this.code = target.innerText;
   }
 }

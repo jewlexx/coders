@@ -5,9 +5,10 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EditorComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
