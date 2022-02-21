@@ -10,14 +10,13 @@ macro_rules! l {
 
 // The array is sorted by the extension name
 lazy_static! {
-    pub static ref LANGUAGES: [(Regex, Language<'static>); 60] = [
+    pub static ref LANGUAGES: [(Regex, Language<'static>); 57] = [
         l!(r"bat", "Batch", "batch"),
         l!(r"c", "C", "c"),
-        l!(r"cc", "C++", "cpp"),
         l!(r"cl", "Common Lisp", "common-lisp"),
         l!(r"clj", "Clojure", "clojure"),
         l!(r"comp", "GLSL", "glsl"),
-        l!(r"cpp", "C++", "cpp"),
+        l!(r"c(c|pp)", "C++", "cpp"),
         l!(r"cs", "C#", "csharp"),
         l!(r"css", "CSS", "css"),
         l!(r"cxx", "C++", "cpp"),
@@ -31,10 +30,8 @@ lazy_static! {
         l!(r"handlebars", "Handlebars", "handlebars"),
         l!(r"hbs", "Handlebars", "handlebars"),
         l!(r"hlsl", "HLSL", "HLSL"),
-        l!(r"hpp", "C++", "cpp"),
-        l!(r"hh", "C++", "cpp"),
-        l!(r"html", "HTML", "html"),
-        l!(r"htm", "HTML", "html"),
+        l!(r"h(h|pp)", "C++", "cpp"),
+        l!(r"html?", "HTML", "html"),
         l!(r"hxx", "C++", "cpp"),
         l!(r"ini", "INI", "ini"),
         l!(r"java", "Java", "java"),
