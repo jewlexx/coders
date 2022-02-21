@@ -20,6 +20,11 @@ pub fn toggle_devtools<R: Runtime>(
 pub struct CurrentFile(pub String);
 
 #[tauri::command]
+pub fn get_old_file(state: tauri::State<'_, CurrentFile>) -> Result<String, String> {
+    Ok(state.0.clone())
+}
+
+#[tauri::command]
 pub fn open_file<R: Runtime>(
     _: tauri::AppHandle<R>,
     window: tauri::Window<R>,

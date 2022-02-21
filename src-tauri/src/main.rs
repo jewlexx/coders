@@ -14,6 +14,7 @@ use std::fs;
 fn main() {
     let builder = tauri::Builder::default().invoke_handler(tauri::generate_handler![
         toggle_devtools,
+        get_old_file,
         open_file,
         read_file,
         get_lang,

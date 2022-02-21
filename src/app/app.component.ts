@@ -1,9 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { invoke } from '@tauri-apps/api';
 
-const openFile = async (editorOptions: any) => {
-  const file = await invoke<string>('open_file');
-  if (file === 'Did not choose file') {
+const openFile = async (editorOptions: any, file?: string) => {
+  file ??= await invoke<string>('open_file');
+  if (file === 'Did not choose file' || file === '') {
     return {
       code: undefined,
       editorOptions: undefined,
@@ -26,7 +26,7 @@ const openFile = async (editorOptions: any) => {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   code: string = `function funcName() {
     alert('yay');
 }`;
@@ -42,5 +42,13 @@ export class AppComponent {
       this.code = code ?? this.code;
       this.editorOptions = editorOptions ?? this.editorOptions;
     }
+  }
+
+  ngOnInit(): void {
+    invoke<string>('get_old_file').then(async (file) => {
+      const { code, editorOptions } = await openFile(this.editorOptions, file);
+      this.editorOptions = editorOptions ?? this.editorOptions;
+      this.code = code ?? this.code;
+    });
   }
 }
