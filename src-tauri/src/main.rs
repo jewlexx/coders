@@ -4,7 +4,9 @@
 )]
 
 mod commands;
+mod utils;
 use commands::*;
+use utils::*;
 
 fn main() {
     let builder = tauri::Builder::default().invoke_handler(tauri::generate_handler![
@@ -14,11 +16,7 @@ fn main() {
         get_lang,
     ]);
 
-    let config_dir = directories::BaseDirs::new()
-        .unwrap()
-        .config_dir()
-        .to_path_buf()
-        .push("Coders");
+    let config_dir = system::get_config_dir();
 
     builder
         .manage(CurrentFile("".into()))
