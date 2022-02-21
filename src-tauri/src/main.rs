@@ -3,10 +3,8 @@
     windows_subsystem = "windows"
 )]
 
-mod commands;
-mod utils;
-use commands::*;
-use utils::*;
+mod lib;
+use lib::{commands::*, system::*};
 
 use std::fs;
 
@@ -18,7 +16,7 @@ fn main() {
         get_lang,
     ]);
 
-    let config_dir = system::get_config_dir();
+    let config_dir = get_config_dir();
     if config_dir.exists() {
         if !config_dir.is_dir() {
             fs::remove_file(config_dir)
