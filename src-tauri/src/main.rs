@@ -8,6 +8,8 @@ mod utils;
 use commands::*;
 use utils::*;
 
+use std::fs;
+
 fn main() {
     let builder = tauri::Builder::default().invoke_handler(tauri::generate_handler![
         toggle_devtools,
@@ -17,6 +19,14 @@ fn main() {
     ]);
 
     let config_dir = system::get_config_dir();
+    if config_dir.exists() {
+        if !config_dir.is_dir() {
+            fs::remove_file(config_dir)
+                .expect("Failed to remove config file, please remove it manually");
+        }
+    } else {
+        fs::create_dir_all(config_dir).expect("Failed to create config directory");
+    }
 
     builder
         .manage(CurrentFile("".into()))
