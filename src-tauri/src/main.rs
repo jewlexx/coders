@@ -14,6 +14,12 @@ fn main() {
         get_lang,
     ]);
 
+    let config_dir = directories::BaseDirs::new()
+        .unwrap()
+        .config_dir()
+        .to_path_buf()
+        .push("Coders");
+
     builder
         .manage(CurrentFile("".into()))
         .run(tauri::generate_context!())
