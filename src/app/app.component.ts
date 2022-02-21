@@ -1,6 +1,24 @@
 import { Component, HostListener } from '@angular/core';
 import { invoke } from '@tauri-apps/api';
 
+const openFile = async (editorOptions: any) => {
+  const file = await invoke<string>('open_file');
+  if (file === 'Did not choose file') {
+    return {
+      code: undefined,
+      editorOptions: undefined,
+    };
+  }
+
+  return {
+    code: await invoke<string>('read_file', { filePath: file }),
+    editorOptions: {
+      ...editorOptions,
+      language: await invoke<string>('get_lang', { filePath: file }),
+    },
+  };
+};
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,22 +32,13 @@ export class AppComponent {
   editorOptions = { theme: 'vs-dark', language: 'javascript' };
 
   @HostListener('window:keydown', ['$event'])
-  keyboardEvent(ev: KeyboardEvent) {
+  async keyboardEvent(ev: KeyboardEvent) {
     if (ev.key === 'i' && ev.ctrlKey && ev.shiftKey) {
       invoke('toggle_devtools');
     } else if (ev.key === 'o' && ev.ctrlKey) {
-      invoke<string>('open_file').then((file) => {
-        if (file === 'Did not choose file') {
-          return;
-        }
-        invoke<string>('read_file', { filePath: file }).then((contents) => {
-          this.code = contents;
-          invoke<string>('get_lang', { filePath: file }).then((language) => {
-            const old = this.editorOptions;
-            this.editorOptions = { ...old, language };
-          });
-        });
-      });
+      const { code, editorOptions } = await openFile(this.editorOptions);
+      this.code = code ?? this.code;
+      this.editorOptions = editorOptions ?? this.editorOptions;
     }
   }
 }
