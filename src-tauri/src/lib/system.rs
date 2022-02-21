@@ -6,5 +6,5 @@ lazy_static! {
 }
 
 pub fn get_config_dir() -> PathBuf {
-    PROJECT_DIRS.project_path().to_path_buf()
+    PROJECT_DIRS.config_dir().to_path_buf()
 }
