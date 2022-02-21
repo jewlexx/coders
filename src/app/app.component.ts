@@ -10,11 +10,13 @@ const openFile = async (editorOptions: any) => {
     };
   }
 
+  const language = await invoke<string>('get_lang', { filePath: file });
+
   return {
     code: await invoke<string>('read_file', { filePath: file }),
     editorOptions: {
       ...editorOptions,
-      language: await invoke<string>('get_lang', { filePath: file }),
+      language,
     },
   };
 };
