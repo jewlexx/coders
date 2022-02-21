@@ -3,6 +3,9 @@
     windows_subsystem = "windows"
 )]
 
+#[macro_use]
+extern crate lazy_static;
+
 mod lib;
 use lib::{commands::*, system::*};
 
