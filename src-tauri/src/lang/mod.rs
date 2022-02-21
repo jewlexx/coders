@@ -1,13 +1,6 @@
-#![forbid(unsafe_code)]
-#![deny(missing_docs)]
-#![deny(missing_debug_implementations)]
-#![warn(clippy::all)]
-
-use std::ops::Deref;
-
 mod languages;
-
 use languages::LANGUAGES;
+use std::ops::Deref;
 
 #[derive(PartialEq, Eq, PartialOrd, Ord, Hash, Clone, Copy, Debug)]
 pub struct Language<'a>(pub &'a str, pub &'a str);
