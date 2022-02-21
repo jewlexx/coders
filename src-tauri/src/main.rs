@@ -6,6 +6,7 @@
 #[macro_use]
 extern crate lazy_static;
 
+mod lang;
 mod lib;
 use lib::{commands::*, system::*};
 

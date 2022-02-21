@@ -42,7 +42,6 @@ checksum = "7a99269dff3bc004caa411f38845c20303f1e393ca2bd6581576fa3a7f59577d"
 name = "app"
 version = "0.1.0"
 dependencies = [
- "detect-lang",
  "directories",
  "lazy_static",
  "serde",
@@ -767,12 +766,6 @@ dependencies = [
  "rustc_version 0.4.0",
  "syn",
 ]
-
-[[package]]
-name = "detect-lang"
-version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0507346abae214ef8128c9417d9f8ae0aa6aad5bbdf56b9a25440befbbf9c0ac"
 
 [[package]]
 name = "digest"

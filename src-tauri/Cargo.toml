@@ -19,7 +19,6 @@ serde_json = { version = "1.0.79" }
 serde_yaml = { version = "0.8.23" }
 serde = { version = "1.0.136", features = ["derive"] }
 tauri = { version = "1.0.0-rc.3", features = ["api-all"] }
-detect-lang = { version = "0.1.5" }
 directories = { version = "4.0.1" }
 lazy_static = { version = "1.4.0" }
 
