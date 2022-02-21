@@ -21,6 +21,7 @@ serde = { version = "1.0.136", features = ["derive"] }
 tauri = { version = "1.0.0-rc.3", features = ["api-all"] }
 directories = { version = "4.0.1" }
 lazy_static = { version = "1.4.0" }
+regex = { version = "1.5.4" }
 
 [features]
 # by default Tauri runs in production mode

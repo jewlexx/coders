@@ -40,8 +40,14 @@ pub fn from_extension<S: AsRef<str>>(extension: S) -> Option<Language<'static>> 
 
 #[inline]
 pub fn from_lowercase_extension<S: AsRef<str>>(extension: S) -> Option<Language<'static>> {
-    LANGUAGES
-        .binary_search_by_key(&extension.as_ref(), |&(ext, _)| ext)
-        .ok()
-        .map(|i| LANGUAGES[i].1)
+    let mut lang: Language = Language("Text", "text");
+
+    for (k, v) in LANGUAGES.clone().iter_mut() {
+        if k.is_match(extension.as_ref()) {
+            lang = *v;
+            break;
+        }
+    }
+
+    Some(lang)
 }
