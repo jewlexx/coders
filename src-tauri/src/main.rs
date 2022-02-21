@@ -9,7 +9,6 @@ extern crate lazy_static;
 mod lang;
 mod lib;
 use lib::{commands::*, system::*};
-
 use std::fs;
 
 fn main() {
