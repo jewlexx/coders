@@ -1,8 +1,12 @@
+use std::fs::write;
+
 // use serde_yaml::{from_str, Mapping, Value};
 use tauri::{
     api::{dialog, file},
     Runtime,
 };
+
+use super::system::get_config_dir;
 
 #[tauri::command]
 pub fn toggle_devtools<R: Runtime>(
@@ -31,7 +35,14 @@ pub fn open_file<R: Runtime>(
                     path.file_name().unwrap().to_str().unwrap()
                 ))
                 .unwrap();
-            Ok(path.into_os_string().into_string().unwrap())
+            let file_path = path.into_os_string().into_string().unwrap();
+
+            match write(get_config_dir().join("workspace.json"), &file_path) {
+                Ok(f) => f,
+                Err(_) => println!("Failed to write to config file"),
+            };
+
+            Ok(file_path)
         }
         None => Ok("Did not choose file".into()),
     }

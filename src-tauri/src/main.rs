@@ -29,8 +29,15 @@ fn main() {
         fs::create_dir_all(config_dir).expect("Failed to create config directory");
     }
 
+    // NOTE: Is not real json
+    let workspace = get_config_dir().join("workspace.json");
+    let old_file = match fs::read_to_string(workspace) {
+        Ok(s) => s,
+        Err(_) => "".into(),
+    };
+
     builder
-        .manage(CurrentFile("".into()))
+        .manage(CurrentFile(old_file))
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
